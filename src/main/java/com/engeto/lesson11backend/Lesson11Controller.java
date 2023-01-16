@@ -96,8 +96,8 @@ public class Lesson11Controller {
     }
 
     @PutMapping("/todoSave/{id}")
-    public void putItemFromTodoDetail(@PathVariable("id") Long id, @RequestBody TodoItem todoItem) throws SQLException{
-        todoItemService.setItemSave(id, todoItem);
+    public void putItemFromTodoDetail( @RequestBody TodoItem todoItem) throws SQLException{
+        todoItemService.updateItem(todoItem);
     }
 
     @DeleteMapping("/todo/{id}")
