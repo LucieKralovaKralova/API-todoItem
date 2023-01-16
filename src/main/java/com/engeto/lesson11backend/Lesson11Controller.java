@@ -95,7 +95,7 @@ public class Lesson11Controller {
         todoItemService.setItemAsDone(id);
     }
 
-    @PutMapping("/todoSave/{id}")
+    @PutMapping("/todoSave")
     public void putItemFromTodoDetail( @RequestBody TodoItem todoItem) throws SQLException{
         todoItemService.updateItem(todoItem);
     }
